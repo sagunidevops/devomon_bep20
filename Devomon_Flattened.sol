@@ -550,25 +550,31 @@ DDDDDDDDDDDDD            eeeeeeeeeeeeee           vvv            ooooooooooo   m
 
 contract Devomon is ERC20, ERC20Burnable {
 
-    constructor(
-        address _seedSaleWallet, 
-        address _privateSaleWallet,
-        address _publicSaleWallet,
-        address _teamWallet,
-        address _stakingWallet,
-        address _gameWallet,
-        address _treasuryWallet,
-        address _advisorsWallet
-    ) ERC20("Devomon", "EVO")
+    constructor() ERC20("Devomon", "EVO")
     {
-        _mint(_seedSaleWallet, 300000000 ether);
-        _mint(_privateSaleWallet, 400000000 ether);
-        _mint(_publicSaleWallet, 500000000 ether);
-        _mint(_teamWallet, 400000000 ether);
-        _mint(_stakingWallet, 720000000 ether);
-        _mint(_gameWallet, 600000000 ether);
-        _mint(_treasuryWallet, 800000000 ether);
-        _mint(_advisorsWallet, 280000000 ether);
+        // Seed Sale Wallet
+        _mint(0x23CC67f2D77A4d85C6A6A18C4d51830B049e5996, 633200000 ether);
+
+        // Private Sale Wallet
+        _mint(0x00910720A4F69A37F9cCbC009d3287D5D22BC8FF, 400000000 ether);
+
+        // Public Sale Wallet
+        _mint(0x83247569A87372b3C11a8D90aD278568F6E57129, 166800000 ether);
+
+        // Team Wallet
+        _mint(0xaf4dDd65Cd09E156f0E7ee7216277B149fD63206, 400000000 ether);
+
+        // Staking Wallet
+        _mint(0xA1F737cD164c63D1084EA755227B751D24a320Ed, 720000000 ether);
+
+        // Treasury Wallet
+        _mint(0x21E3df9D484d9421a94652e19437eD69991c371B, 600000000 ether);
+
+        // Liquidity Wallet
+        _mint(0x6a37e4814A53De01Cad408AAD5ECc782E57A1832, 800000000 ether);
+
+        // Advisors Wallet
+        _mint(0x53F164739Dc03a238c44aF5B5aF5077bb9D24F70, 280000000 ether);
     }
 }
 
